@@ -10,16 +10,16 @@ The website's been built on pure javascript, html and css, no frameworks used at
 
 1. Make a new folder wherever you want, go inside and using any terminal of your preference, execute the following command.
 
-```sh
+```bash
 cd Whichever folder you want
 ```
 2. Execute the following git clone.
 
-```sh
+```bash
 git clone https://github.com/josecpamo/personal-website.git
 ```
 
-3. And there you go! If you have at least one browser in your device, you can open the project from any IDE that supports it.
+And there you go! If you have at least one browser in your device, you can open the project from any IDE that supports it.
 
 ---
 
