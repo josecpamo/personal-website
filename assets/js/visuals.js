@@ -62,7 +62,22 @@
     });
 }
 
+{ //Right arrow rotate animation
+    //Website panel
+    const websiteArrow = document.querySelector("#website-img");
+    const website = document.querySelector("#website");
 
+    website.addEventListener("click", () => {
+        if (!website.classList.contains("opened")) {
+            websiteArrow.style.transform = "rotate(90deg)";
+            website.classList.add("opened");
+        }
+        else {
+            websiteArrow.style.transform = "rotate(0deg)";
+            website.classList.remove("opened");
+        }
+    });
+}
 
 
 

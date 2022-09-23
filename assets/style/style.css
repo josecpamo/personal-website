@@ -109,6 +109,7 @@ hr{
     font-weight: 500;
     font-size: 24px;
     text-decoration: none;
+    color: var(--txt-color);
     transition: color 0.3s linear;
 }
 
@@ -129,6 +130,8 @@ hr{
     animation-name: container-show;
     animation-duration: 1s;
 }
+
+/* About me section */
 
 .about-me img{
     width: 320px;
@@ -160,6 +163,87 @@ hr{
 .skills-style li{
     font-size: 20px;
     text-align: left;
+}
+
+/* Portfolio section */
+
+.dropdown-panel{
+    margin: 40px auto;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px black solid;
+    border-radius: 25px;
+    transition: border-color 0.3s;
+}
+
+.dropdown-panel label{
+    cursor: pointer;
+}
+
+.dropdown-panel:active{
+    border-color: var(--main-color);
+}
+
+.input-txt h2{
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--txt-color);
+    transition: color 0.3s;
+}
+
+.input-txt:active h2{
+    color: var(--main-color);
+}
+
+.input-txt img{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    max-width: 10%;
+    max-height: 10%;
+    transition: transform 0.5s;
+}
+
+.panel-content{
+    display: flex;
+    width: 100%;
+    height: 0;
+    border-radius: 0 0 25px 25px;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+.panel-content p{
+    margin: auto 0;
+    padding: 20px;
+    width: 50%;
+    font-size: 24px;
+    text-align: justify;
+}
+
+.panel-content a{
+    color: var(--main-color);
+    text-decoration-color: transparent;
+    transition: color 1s, text-decoration-color 0.3s linear;
+}
+
+.panel-content img{
+    margin: auto 0;
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+}
+
+.touch{
+    position: absolute;
+    height: 0;
+    opacity: 0;
+}
+
+#website:checked + .panel-content{
+    height: 400px;
+    opacity: 100%;
 }
 
 /* Footer */
@@ -293,9 +377,11 @@ hr{
         transform-origin: center;
     }
 
-    .nav-style:hover{   
+    .nav-style:hover,
+    .input-txt:hover h2{
         color: var(--main-color);
-    }
+    } 
+
 
     .up-arrow:hover{
         transform: scale(1.2);
@@ -306,12 +392,21 @@ hr{
         color: var(--main-color);
         text-decoration: underline;
     }
+
+    .dropdown-panel:hover{
+        border-color: var(--main-color);
+    }
+
+    .panel-content a:hover{
+        text-decoration-color: var(--main-color);
+    }
 }
 
 /* Media about screen size */
 
 @media (max-width: 800px){
-    header{
+    header,
+    .rows-model{
         flex-direction: column;
     }
 
@@ -319,7 +414,7 @@ hr{
         padding: 10px;
     }
 
-    .container{
+    .main-container{
         max-width: 100%;
     }
 
@@ -327,12 +422,9 @@ hr{
         font-size: 24px;
     }
 
-    .about-me p{
+    .about-me p,
+    .skills-style li{
         font-size: 16px;
-    }
-
-    .rows-model{
-        flex-direction: column;
     }
 
     .skills-style h2{
@@ -340,11 +432,8 @@ hr{
         text-align: left;
     }
 
-    .skills-style li{
-        font-size: 16px;
-    }
-
-    .contact-me h2{
+    .contact-me h2,
+    .input-txt h2{
         font-size: 20px;
     }
 
@@ -356,6 +445,30 @@ hr{
         flex-direction: column;
         text-align: center;
     }
+
+    .input-txt img{
+        transition: transform 0s;
+    }
+
+    .panel-content{
+        flex-direction: column;
+        transition: height 0s;
+    }
+
+    .panel-content p{
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .panel-content img{
+        width: 100%;
+    }
+
+    #website:checked + .panel-content{
+    height: fit-content;
+    opacity: 100%;
+    }
+
 }
 
 /* Media when screen size's too small */
