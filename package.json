@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/josecpamo/personal-website/issues"
   },
-  "homepage": "https://github.com/josecpamo/personal-website#readme"
+  "homepage": "https://github.com/josecpamo/personal-website#readme",
+  "publishConfig": {
+   "@josecpamo:registry": "https://npm.pkg.github.com"
+ }
 }
