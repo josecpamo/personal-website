@@ -1,0 +1,19 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "\u001b\u001a ",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josecpamo/personal-website.git"
+  },
+  "author": "\u001b[A\u001b[B\u001b[A\u001b[C\u001b[C\u001b josecpamo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josecpamo/personal-website/issues"
+  },
+  "homepage": "https://github.com/josecpamo/personal-website#readme"
+}
