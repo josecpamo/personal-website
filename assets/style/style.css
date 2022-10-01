@@ -78,6 +78,7 @@ hr{
 .header{
     display: flex;
     padding: 15px;
+    margin-bottom: 300px;
     justify-content: space-between;
     align-items: center;
     min-height: auto;
@@ -121,6 +122,7 @@ hr{
 /* Main container */
 
 .main-container{
+    position: relative;
     border-radius: 25px;
     padding: 3%;
     max-width: 80%;
@@ -135,18 +137,21 @@ hr{
 /* About me section */
 
 .about-me img{
-    width: 320px;
-    height: 320px;
-    max-width: 80%;
-    max-height: 80%;
+    position: absolute;
+    left: 50%;
+    top: -6%;
+    width: 280px;
+    height: 280px;
     border-radius: 100%;
     border: 1px black solid;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none; 
+    transform: translate(-50%, -50%);
 }
 
 .about-me h1{
+    margin-top: 50px;
     font-size: 32px;
 }
 
@@ -358,7 +363,7 @@ hr{
 }
 
 @keyframes container-show{
-    from {margin-top: 0%; opacity: 5%;}
+    from {margin-top: 0; opacity: 5%;}
     to {margin-top: 10%; opacity: 100%;}
 }
 
@@ -418,7 +423,14 @@ hr{
     }
 
     .main-container{
+        margin: 150px auto;
         max-width: 100%;
+    }
+
+    .about-me img{
+        top: -2%;
+        width: 180px;
+        height: 180px;
     }
 
     .about-me h1{

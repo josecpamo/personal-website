@@ -27,5 +27,4 @@ And there you go! If you have at least one browser in your device, you can open 
 
 * Add language switching
 * Contact form
-* Portfolio section under the main container
-* Optimize the html and css classes
+* Change container colors
