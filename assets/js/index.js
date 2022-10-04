@@ -1,4 +1,4 @@
-{ //Dark mode function
+const darkModeFunction = () => { //Dark mode function
     const bulb = document.querySelector(".bulb img");
     const root = document.querySelector(":root");
     let darkMode = localStorage.getItem("darkMode");
@@ -36,7 +36,7 @@
     })
 }
 
-{ //Up arrow on scroll show up animation 
+const upArrowShowUp = () => { //Up arrow on scroll show up animation 
     window.addEventListener("scroll", () => {
         const upArrow = document.querySelector(".up-arrow");
         const scrollPosition = window.scrollY;
@@ -50,7 +50,7 @@
     })
 }
 
-{ //Up arrow scroll function
+const upArrowOnScroll = () => { //Up arrow scroll function
     const upArrow = document.querySelector(".up-arrow");
 
     upArrow.addEventListener("click", () => {
@@ -62,23 +62,29 @@
     });
 }
 
-{ //Right arrow rotate animation
-    //Website panel
-    const websiteArrow = document.querySelector("#website-img");
-    const website = document.querySelector("#website");
+const panelArrowAnimation = () => { //Panel arrow rotate animation
+    const dropdownPanel = document.querySelector(".dropdown-panel");
+    const panelCheckbox = document.querySelectorAll(".panel-checkbox");
+    const panelArrow = document.querySelectorAll(".panel-arrow");
 
-    website.addEventListener("click", () => {
-        if (!website.classList.contains("opened")) {
-            websiteArrow.style.transform = "rotate(90deg)";
-            website.classList.add("opened");
+    document.addEventListener("click", e => {
+        if (e.target.matches(".panel-checkbox")) {
+            if (!dropdownPanel.classList.contains("opened")) {
+                panelArrow[[].indexOf.call(panelCheckbox, e.target)].style.transform = "rotate(90deg)";
+                dropdownPanel.classList.add("opened");
+            }
+            else {
+                panelArrow[[].indexOf.call(panelCheckbox, e.target)].style.transform = "rotate(0deg)";
+                dropdownPanel.classList.remove("opened");
+            }
         }
-        else {
-            websiteArrow.style.transform = "rotate(0deg)";
-            website.classList.remove("opened");
-        }
-    });
+    })
 }
 
+darkModeFunction();
+upArrowShowUp();
+upArrowOnScroll();
+panelArrowAnimation();
 
 
 

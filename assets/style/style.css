@@ -192,7 +192,7 @@ hr{
     border-color: var(--main-color);
 }
 
-.input-txt h2{
+.panel-title{
     display: inline-block;
     font-size: 24px;
     font-weight: 900;
@@ -200,11 +200,11 @@ hr{
     transition: color 0.3s;
 }
 
-.input-txt:active h2{
+.panel-title:active{
     color: var(--main-color);
 }
 
-.input-txt img{
+.panel-arrow{
     display: inline-block;
     width: 16px;
     height: 16px;
@@ -243,7 +243,7 @@ hr{
     height: 100%;
 }
 
-.touch{
+.panel-checkbox{
     position: absolute;
     height: 0;
     opacity: 0;
@@ -461,7 +461,7 @@ hr{
         text-align: center;
     }
 
-    .input-txt img{
+    .panel-arrow{
         transition: transform 0s;
     }
 
